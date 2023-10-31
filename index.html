@@ -5,10 +5,176 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Title</title>
+    <!--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Welcome to My Website</h1>
-<p>This is a paragraph of text.</p>
+
+<section class="header-section">
+    <header>
+        <p>EspressoEcke</p>
+        <a class="hamburger" onclick="openNav()">&#9776;</a>
+    </header>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</section>
+
+<section class="main-content">
+    <article id="slideshoww" class="landing-page">
+        <div class="landingpage-main-text">
+            <h1>Willkommen <br> im Kaffee <span
+                    style="color: #d3a87a; text-shadow: 3px 3px 2px black;">EspressoEcke</span>
+            </h1>
+            <p>Entdecken Sie Ihren neuen Lieblingsort mitten im Herzen der Stadt. Bei uns trifft Tradition auf
+                Moderne,
+                und
+                jeder Schluck <br> erzählt eine Geschichte.</p>
+        </div>
+        <button class="btn-ueberuns">Über uns</button>
+        <button class="btn-kontakt">Kontakt</button>
+        <div class="sliderdots">
+            <div class="circle" id="circle0"
+                 onclick="clearTimeout(timeOutId); currentImageId=0;  changePicture()"></div>
+            <div class="circle" id="circle1"
+                 onclick="clearTimeout(timeOutId); currentImageId=1;  changePicture()"></div>
+            <div class="circle" id="circle2"
+                 onclick="clearTimeout(timeOutId); currentImageId=2;  changePicture()"></div>
+        </div>
+    </article>
+    <article class="spezialitaten">
+        <h2 style="text-align:center">Spezialitäten</h2>
+        <div class="spezialitat">
+            <img alt="Unsere coffee" src="images/handmade-coffee.png" height="200px" width="300px">
+            <p>Handgefertigter Kaffee</p>
+        </div>
+        <div class="spezialitat">
+            <img alt="Unsere pastries" src="images/pastries.png" height="200px" width="300px">
+            <p>Frisches Gebäck</p>
+        </div>
+        <div class="spezialitat">
+            <img alt="Unsere Atomosphere" src="images/coffee-atmosphere2.png" height="200px" width="300px">
+            <p>Gemütliche Atmosphäre</p>
+        </div>
+    </article>
+    <article id="counter" class="zahlen number-counter">
+        <div>
+            <p class="zahl count" data-target="2570">0</p>
+            <p>Kaffees serviert</p>
+        </div>
+        <div>
+            <p class="zahl count" data-target="1200">0</p>
+            <p>Glückliche Kunden</p>
+        </div>
+    </article>
+</section>
+
+
+<footer>
+    <section class="socialmedia">
+        <a href="https://facebook.com" target="_blank" class="facebook"></a>
+        <a href="https://twitter.com" target="_blank" class="twitter"></a>
+        <a href="https://youtube.com" target="_blank" class="youtube"></a>
+        <a href="https://whatsapp.com" target="_blank" class="whatsapp"></a>
+    </section>
+    <section class="bottomfoot">
+        <a href="index.html">Impressum</a>
+        <a href="index.html">AGB</a>
+        <a href="index.html">Datenschutz</a>
+        <a href="index.html">Kontakt</a>
+    </section>
+</footer>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.left = "0";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.left = "100%";
+    }
+
+    //Slideshow
+    var currentImageId = 0;
+    var images = [];
+    var slideTime = 5000; // 5 seconds
+    var timeOutId;
+
+
+    images[0] = 'images/christina-rumpf-LMzwJDu6hTE-unsplash.jpg';
+    images[1] = 'images/empreinte-02O1bXB_fgk-unsplash.jpg';
+    images[2] = 'images/nathan-dumlao-wl5lJvJhkRM-unsplash.jpg';
+
+    async function changePicture() {
+        const img = new Image();
+        img.src = images[currentImageId]
+        await img.decode()
+            .then(() => {
+                document.getElementById("slideshoww").style.backgroundImage = "url(" + img.src + ")";
+                document.getElementById("slideshoww").style.backgroundSize = "auto 100%";
+                document.getElementById("slideshoww").style.backgroundRepeat = "no-repeat";
+                document.getElementById("slideshoww").style.backgroundPosition = "center";
+                for (i = 0; i < 3; i++) {
+
+                    document.getElementById(("circle" + i)).style.backgroundColor = "rgba(0,0,0,0.37)";
+                }
+                document.getElementById(("circle" + currentImageId)).style.backgroundColor = "black";
+
+                if (currentImageId < images.length - 1) {
+                    currentImageId++;
+                } else {
+                    currentImageId = 0;
+                }
+
+
+                timeOutId = setTimeout(changePicture, slideTime);
+            }).catch((e) => {
+                console.log("Error while im decoding")
+                console.log(e)
+            })
+    }
+
+    window.onload = changePicture;
+
+    //Count up animation
+    document.addEventListener('scroll', function () {
+        const counter = document.getElementById('counter');
+        const counts = counter.querySelectorAll('.count');
+
+        counts.forEach((count) => {
+            const target = parseInt(count.getAttribute('data-target'), 10);
+
+            const rect = counter.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                // Element is in view
+                startCounting(count, target);
+            }
+        })
+    });
+
+    function startCounting(element, target) {
+        const current = parseInt(element.innerText, 10);
+        const increment = target / 150;
+
+        if (current < target) {
+            element.innerText = Math.ceil(current + increment);
+            setTimeout(() => startCounting(element, target), 30);
+        } else {
+            element.innerText = target;
+        }
+    }
+
+</script>
 </body>
 </html>

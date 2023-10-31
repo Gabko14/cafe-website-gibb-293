@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+header {
+    background-color: rgba(0, 0, 0, 0);
+    align-content: center;
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    z-index: 10;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f5e9d8;
+}
+header > p {
+    text-align: left;
+    margin-left: 10vw;
+    font-size: 1.2em;
+    color: #3c3c3c;
+}
+
+.hamburger {
+    font-size:32px;
+    cursor:pointer;
+    margin: 0 10vw;
+    color: #c58d59;
+    align-self: center;
+
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 100%;
+    background-color: rgb(211, 168, 122);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 10vw;
+    font-size: 53px;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #3b2f2f;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.socialmedia {
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-evenly;
+    flex-basis: auto;
+    height: 130px;
+    align-items: center;
+    border-bottom: rgba(189, 189, 189, 0.29) 1px solid;
+}
+
+.facebook {
+    background-image: url("images/facebook-app-round-white-icon.svg");
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+}
+.twitter {
+    background-image: url("images/twitter-icon.svg");
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+}
+.youtube {
+    background-image: url("images/youtube-icon.svg");
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+}
+.whatsapp {
+    background-image: url("images/whatsapp-icon.svg");
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+}
+
+.bottomfoot {
+    height: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    place-items: center;
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 0 30px;
+
+    gap: 10px;
+}
+
+.bottomfoot > a {
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    place-self: center;
+    text-decoration: none;
+    color: #f5e9d8;
+}
+
+.bottomfoot > p:hover {
+    filter: brightness(85%);
+}

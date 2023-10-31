@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&display=swap');
+
+.landing-page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 100px 35px 0 35px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.75);
+}
+
+.landingpage .landingpage-main-text, .landingpage button {
+    z-index: 1000;
+    position: relative;
+    pointer-events: auto;
+}
+
+.landingpage-main-text {
+    line-height: 1.2;
+    color: #232323;
+    font-size: 25pt;
+}
+
+.landingpage-main-text > p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: #282828;
+    padding-bottom: 15px;
+}
+
+.btn-ueberuns {
+    border: black solid 2px;
+    height: 48px;
+    background-color: #d3a87a;
+    color: #3b2f2f;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.btn-ueberuns:hover {
+    filter: brightness(82%);
+}
+
+.btn-kontakt:hover {
+    filter: brightness(82%);
+}
+
+.btn-kontakt {
+    border: black solid 2px;
+    height: 48px;
+    background-color: #3b2f2f;
+    color: #F5E9D8;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+/* Slideshow */
+.landing-page {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /*z-index: -1;*/
+}
+
+.landingpage h1 {
+    font-family: 'Noto Sans', sans-serif !important;
+}
+
+/*Sldier Dots*/
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.37);
+    border: rgba(59, 47, 47, 0) 2px solid;
+}
+
+.circle:hover {
+    border: #3b2f2f 2px solid;
+    transform: scale(110%);
+}
+
+.sliderdots {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-content: center;
+    align-items: end;
+    flex-grow: 0.5;
+    gap: 15px;
+    padding-bottom: 14px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.spezialitaten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    font-size: 17px;
+    color: #232323;
+}
+
+.spezialitaten img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.spezialitaten h2 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.zahlen {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #232323;
+}
+
+.zahlen p {
+    padding:  0;
+    margin: 0;
+    font-size: 22px;
+}
+
+.zahlen .zahl {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.number-counter {
+    font-size: 2em;
+    text-align: center;
+}
+
+.count {
+    font-weight: bold;
+}
