@@ -122,6 +122,7 @@
 
 #slideshoww {
     transition: all 0.7s ease;
+    opacity: 0;
 }
 
 .main-content {
@@ -138,11 +139,13 @@
     gap: 50px;
     font-size: 17px;
     color: #232323;
+    padding: 0 60px;
 }
 
 .spezialitaten img {
     object-fit: cover;
     object-position: center;
+    width: 100%;
 }
 
 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="gerichte.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="header-section">
+    <header>
+        <a href="../../index.html">EspressoEcke</a>
+        <a class="hamburger" onclick="openNav()">&#9776;</a>
+    </header>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="../../pages/ueber-uns/ueber-uns.html">Über uns</a>
+            <a href="../../pages/gerichte/gerichte.html">Gerichte</a>
+            <a href="../../pages/newsletter/newsletter.html">Newsletter</a>
+            <a href="../../pages/kontakt/kontakt.html">Kontakt</a>
+        </div>
+    </div>
+</section>
+
+<section class="main-content">
+    <article class="landing-page">
+        <div class="landingpage-main-text">
+            <h1>Unsere Gerichte</h1>
+        </div>
+    </article>
+    <article class="gerichte">
+        <section class="coffees">
+            <h2>Kaffees</h2>
+            <article>
+                <img src="../../images/espresso-dalle-square.png" alt="our croissant">
+                <h3>Espresso</h3>
+                <p>Ein kräftiger Shot, der den wahren Geschmack des Kaffees hervorhebt</p>
+            </article>
+            <article>
+                <img src="../../images/cappucino-dalle-square.png" alt="our muffin">
+                <h3>Cappuccino</h3>
+                <p>Eine harmonische Mischung aus Espresso, heißer Milch und Milchschaum</p>
+            </article>
+            <article>
+                <img src="../../images/lattemachiato2-dalle-square.png" alt="our Apple Strudel">
+                <h3>Latte Macchiato</h3>
+                <p>Geschichteter Kaffee-Genuss mit Espresso, warmer Milch und einem Hauch von Schaum</p>
+            </article>
+        </section>
+        <section class="cakes">
+            <h2>Kuchen</h2>
+            <article>
+                <img src="../../images/croissant-dalle-square.png" alt="our croissant">
+                <h3>Croissant</h3>
+                <p>Butterig und knusprig, perfekt zum Eintauchen in Ihren Morgenkaffee.</p>
+            </article>
+            <article>
+                <img src="../../images/muffin-dalle-square.png" alt="our muffin">
+                <h3>Muffin</h3>
+                <p>Saftig und reichhaltig, mit dunklen Schokoladenstücken.</p>
+            </article>
+            <article>
+                <img src="../../images/apple-strudel-dalle-square.png" alt="our Apple Strudel">
+                <h3>Apfel Strudel</h3>
+                <p>Ein traditionelles Gebäck mit süßen Äpfeln, Rosinen und einer Prise Zimt.</p>
+            </article>
+        </section>
+    </article>
+</section>
+
+
+<footer>
+    <section class="socialmedia">
+        <a href="https://facebook.com" target="_blank" class="facebook sm-icon"></a>
+        <a href="https://twitter.com" target="_blank" class="twitter sm-icon"></a>
+        <a href="https://youtube.com" target="_blank" class="youtube sm-icon"></a>
+        <a href="https://whatsapp.com" target="_blank" class="whatsapp sm-icon"></a>
+    </section>
+    <section class="bottomfoot">
+        <a href="../../index.html">Impressum</a>
+        <a href="../../index.html">AGB</a>
+        <a href="../../index.html">Datenschutz</a>
+        <a href="../../index.html">Kontakt</a>
+    </section>
+</footer>
+
+<script>
+    //Nav
+    function openNav() {
+        document.getElementById("myNav").style.left = "0";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.left = "100%";
+    }
+
+</script>
+</body>
+</html>

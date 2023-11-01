@@ -41,8 +41,8 @@
                 und
                 jeder Schluck <br> erzählt eine Geschichte.</p>
         </div>
-        <button class="btn-ueberuns">Über uns</button>
-        <button class="btn-kontakt">Kontakt</button>
+        <button class="btn-ueberuns" onclick="window.location.href='pages/ueber-uns/ueber-uns.html'">Über uns</button>
+        <button class="btn-kontakt" onclick="window.location.href='pages/kontakt/kontakt.html'">Kontakt</button>
         <div class="sliderdots">
             <div class="circle" id="circle0"
                  onclick="clearTimeout(timeOutId); currentImageId=0;  changePicture()"></div>
@@ -55,15 +55,15 @@
     <article class="spezialitaten">
         <h2 style="text-align:center">Spezialitäten</h2>
         <div class="spezialitat">
-            <img alt="Unsere coffee" src="images/handmade-coffee.png" height="200px" width="300px">
+            <img alt="Unsere coffee" src="images/handmade-coffee.png">
             <p>Handgefertigter Kaffee</p>
         </div>
         <div class="spezialitat">
-            <img alt="Unsere pastries" src="images/pastries.png" height="200px" width="300px">
+            <img alt="Unsere pastries" src="images/pastries.png">
             <p>Frisches Gebäck</p>
         </div>
         <div class="spezialitat">
-            <img alt="Unsere Atomosphere" src="images/coffee-atmosphere2.png" height="200px" width="300px">
+            <img alt="Unsere Atomosphere" src="images/coffee-atmosphere2.png">
             <p>Gemütliche Atmosphäre</p>
         </div>
     </article>
@@ -125,6 +125,7 @@
                 document.getElementById("slideshoww").style.backgroundSize = "auto 100%";
                 document.getElementById("slideshoww").style.backgroundRepeat = "no-repeat";
                 document.getElementById("slideshoww").style.backgroundPosition = "center";
+                document.getElementById("slideshoww").style.opacity = "1";
 
                 for (i = 0; i < 3; i++) {
                     document.getElementById(("circle" + i)).style.backgroundColor = "rgba(0,0,0,0.37)";

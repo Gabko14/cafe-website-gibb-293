@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&display=swap');
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+    align-items: center;
+    padding-top: 110px;
+}
+
+.gerichte {
+    padding: 0 60px;
+}
+
+.landing-page {
+    font-family: 'Noto Sans', sans-serif !important;
+}
+
+.landingpage-main-text > h1 {
+    margin: 0;
+    color: #d4a373;
+}
+
+.landingpage-main-text {
+    line-height: 1.4;
+    color: #3b2f2f;
+    font-size: 23pt;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.landingpage-main-text > p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: #232323;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 355px) {
+    .landingpage-main-text > p {
+        font-size: 15px !important;
+    }
+
+    .landingpage-main-text {
+        font-size: 21pt !important;
+    }
+    .gerichte h2 {
+        font-size: 19pt !important;
+    }
+}
+
+.gerichte {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.gerichte img {
+    width: 100%;
+}
+
+.gerichte h2 {
+    font-size: 22pt;
+    bottom: 0;    color: #3b2f2f;
+
+    text-decoration: underline;
+    text-decoration-color: #3b2f2f;
+}
+
+.gerichte > section > article > p, .gerichte > section > article > h3{
+    margin: 0;
+}
+
+.gerichte > section > article > p {
+    padding-bottom: 35px;
+}
+
+.gerichte > section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gerichte > section > article {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
