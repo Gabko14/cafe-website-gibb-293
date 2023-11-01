@@ -1,0 +1,87 @@
+.landing-page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 100px 35px 0 35px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.75);
+    overflow: hidden;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    /*z-index: -1;*/
+
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../images/about-us-dalle3.png");
+}
+
+.landingpage {
+    font-family: 'Noto Sans', sans-serif !important;
+}
+.landingpage-main-text > h1 {
+    margin: 0;
+}
+
+.landingpage-main-text {
+    line-height: 1.4;
+    color: #3b2f2f;
+    font-size: 30pt;
+}
+
+.landingpage-main-text > p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    color: #282828;
+    padding-bottom: 15px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+}
+
+.main-content > article {
+    padding: 0 31px;
+}
+
+.team-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    justify-items: center;
+}
+
+.team-member-image {
+    background-color: #3b2f2f;
+    width: 38vw;
+    height: 38vw;
+}
+
+.team-member-image {
+    background-position: center;
+    background-size: contain;
+}
+
+.team-member1 {
+    background-image: url("../../images/worker-dalle1.png");
+}
+.team-member2 {
+    background-image: url("../../images/worker-dalle2.png");
+}
+.team-member3 {
+    background-image: url("../../images/worker-dalle3.png");
+}
+.team-member4 {
+    background-image: url("../../images/worker-dalle4.png");
+}
+.team-member5 {
+    background-image: url("../../images/worker-dalle5.png");
+}
+.team-member6 {
+    background-image: url("../../images/worker-dalle6.png");
+}
