@@ -22,6 +22,30 @@
     font-size: 25pt;
 }
 
+@media (max-width: 350px) {
+    .landingpage-main-text {
+        font-size: 23pt !important;
+    }
+
+    .landingpage-main-text > p {
+        font-size: 15px !important;
+    }
+
+    .landing-page {
+        padding: 50px 30px 0 30px;
+    }
+
+    .btn-ueberuns {
+        height: 36px !important;
+        font-size: 13px !important;
+    }
+
+    .btn-kontakt {
+        height: 36px !important;
+        font-size: 13px !important;
+    }
+}
+
 .landingpage-main-text > p {
     font-family: 'Noto Sans', sans-serif;
     font-size: 18px;
@@ -62,6 +86,7 @@
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    min-height: 550px;
     position: relative;
     /*z-index: -1;*/
 }

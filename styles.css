@@ -20,11 +20,13 @@ html {
 body {
     background-color: #f5e9d8;
 }
-header > p {
+header > a {
     text-align: left;
     margin-left: 10vw;
     font-size: 1.2em;
     color: #3c3c3c;
+    align-self: center;
+    text-decoration: none;
 }
 
 .hamburger {
