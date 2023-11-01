@@ -6,11 +6,76 @@ header {
     text-align: right;
     width: 100%;
     position: absolute;
-    margin: 10px 0;
+    margin: 2vh 0;
     display: grid;
     grid-template-columns: 8fr 1fr;
     z-index: 10;
+}
 
+@media (min-width: 1050px) {
+    .hamburger {
+        display: none;
+    }
+    .overlay {
+    }
+    .overlay-content {
+        display: flex;
+        top: 0 !important;
+        margin: 0 !important;
+        justify-content: center;
+    }
+    .overlay-content > a {
+        font-size: 18px !important;
+        height: 100%;
+    }
+    #myNav {
+        left: 0;
+        background-color: rgba(0,0,0,0);
+        position: static;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .closebtn {
+        display: none !important;
+    }
+    .header-section {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        position: absolute;
+        width: 100%;
+        padding: 20px 0;
+    }
+    header {
+        margin: 0;
+        position: static;
+        background-color: rgba(0,0,0,0);
+        display: flex;
+        justify-content: flex-end;
+    }
+    .landing-page .btn-kontakt {
+        display: none;
+    }
+    .btn-kontakt {
+        border-radius: 0 !important;
+        box-sizing: content-box;
+        position: relative;
+        z-index: 1;
+        width: 125px !important;
+        height: 36px !important;
+        font-size: 15px !important;
+    }
+    .landingpage-main-text {
+        font-size: 34pt !important;
+    }
+    .landingpage-main-text > h1 > br:first-of-type {
+        display: none;
+    }
+
+    .landing-page {
+        padding: 0 300px !important;
+    }
 }
 
 html {
@@ -68,6 +133,7 @@ header > a {
 
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
+    filter: brightness(15%);
 }
 
 .overlay .closebtn {
