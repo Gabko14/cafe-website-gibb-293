@@ -41,10 +41,12 @@
         <p> <span class="phone-icon icon"></span> Kaffestrasse 123, Bern</p>
         <p> <span class="map-icon icon"></span> +41 77 374 10 54</p>
         <form>
-            <input name="Name" placeholder="Name">
-            <input name="E-Mail" placeholder="Email Adresse">
+                <input name="Name" id="name-input" placeholder="Name">
+            <label for="name-input"></label>
+            <input type="email" id="mail-input" name="E-Mail" placeholder="Email Adresse">
+            <label for="mail-input" class="mail-label" style="color: red; opacity: 0">Incorrect Address</label>
             <label>
-                <textarea placeholder="Schreibe deine Nachricht hier" name="Message"></textarea>
+                <textarea id="text-input" placeholder="Schreibe deine Nachricht hier" name="Message"></textarea>
             </label>
             <button type="submit">Abschicken</button>
         </form>
@@ -76,6 +78,25 @@
     function closeNav() {
         document.getElementById("myNav").style.left = "100%";
     }
+
+    //Validation
+    const email = document.getElementById("mail-input");
+
+    email.addEventListener("blur", () => {
+        if (email.validity.typeMismatch) {
+            email.style.borderColor = "red"
+            email.style.borderStyle = "dotted"
+            document.querySelector(".mail-label").style.opacity = "1"
+            document.querySelector(".mail-label").style.display = "block"
+        } else {
+            email.setCustomValidity("");
+            email.style.borderColor = "#3b2f2f"
+            email.style.borderStyle = "solid"
+            document.querySelector(".mail-label").style.opacity = "0"
+            document.querySelector(".mail-label").style.display = "none"
+        }
+    });
+
 </script>
 </body>
 </html>

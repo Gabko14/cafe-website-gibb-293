@@ -10,12 +10,14 @@
 .map {
     padding: 90px 40px 0 40px;
     height: 80vw;
+
 }
 
 .map-embed {
     border: 0;
     height: 100%;
     width: 100%;
+    background-color: rgba(60, 60, 60, 0.44);
 }
 .form {
     display: flex;
@@ -51,11 +53,15 @@ i {
     background-image: url("../../images/phone.svg");
 }
 
+.form {
+    gap: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 15px;
+    gap: 12px;
     padding: 25px 0;
 }
 
@@ -77,6 +83,7 @@ input::placeholder, textarea::placeholder {
 
 .form textarea{
     resize: vertical;
+    height: 110px;
 }
 
 form > button {
@@ -86,4 +93,17 @@ form > button {
     color: #F5E9D8;
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
+}
+
+.form h1, .form p {
+    margin: 0;
+    border: black ;
+}
+
+.form .mail-label {
+    display: none;
+}
+
+.form button {
+    margin-top: 18px;
 }
