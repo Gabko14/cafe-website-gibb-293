@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Website Title</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="ueber-uns.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<section class="header-section">
-    <header>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="ueber-uns.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="header-section">
+      <header>
         <a href="../../index.html">EspressoEcke</a>
         <a class="hamburger" onclick="openNav()">&#9776;</a>
-    </header>
+      </header>
 
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
         <div class="overlay-content">
-            <a href="../../pages/ueber-uns/ueber-uns.html">Über uns</a>
-            <a href="../../pages/gerichte/gerichte.html">Gerichte</a>
-            <a href="../../pages/newsletter/newsletter.html">Newsletter</a>
-            <a href="../../pages/kontakt/kontakt.html">Kontakt</a>
+          <a href="../../index.html">Home</a>
+          <a
+            href="../../pages/ueber-uns/ueber-uns.html"
+            style="
+              color: #232323;
+              text-decoration: #232323 solid underline 3px;
+              text-underline-offset: 10px;
+            "
+            >Über uns</a
+          >
+          <a href="../../pages/gerichte/gerichte.html">Gerichte</a>
+          <a href="../../pages/newsletter/newsletter.html">Newsletter</a>
+          <a href="../../pages/kontakt/kontakt.html">Kontakt</a>
         </div>
-    </div>
-</section>
-
-<section class="main-content">
-    <article class="landing-page">
-        <div class="landingpage-main-text">
-            <h1>Über uns</h1>
-            <p>Die EspressoEcke, im Herzen Bern, verbindet Tradition mit modernem Kaffeegenuss. Seit unserer Gründung im
-                Jahr 2003 haben wir uns dem perfekten Espresso verschrieben</p>
-        </div>
-    </article>
-    <article class="mission">
-        <h2>Unsere Mission</h2>
-        <p>Wir bei EspressoEcke streben danach, jeden Moment zu einem besonderen Kaffeemoment zu machen und unsere
-            Gemeinschaft durch den Geschmack von Premium-Espresso zu verbinden</p>
-    </article>
-    <article class="team">
-        <h2>Unser Team</h2>
-        <p>Ein Team aus leidenschaftlichen Baristas und Kaffeeliebhabern, die es sich zur Aufgabe gemacht haben, Ihre
-            Kaffeepausen unvergesslich zu gestalten</p>
-        <div class="team-images">
-            <div class="team-member-image team-member1"></div>
-            <div class="team-member-image team-member2"></div>
-            <div class="team-member-image team-member3"></div>
-            <div class="team-member-image team-member4"></div>
-            <div class="team-member-image team-member5"></div>
-            <div class="team-member-image team-member6"></div>
-        </div>
-    </article>
-</section>
-
-
-<footer>
-    <section class="socialmedia">
-        <a href="https://facebook.com" target="_blank" class="facebook sm-icon"></a>
-        <a href="https://twitter.com" target="_blank" class="twitter sm-icon"></a>
-        <a href="https://youtube.com" target="_blank" class="youtube sm-icon"></a>
-        <a href="https://whatsapp.com" target="_blank" class="whatsapp sm-icon"></a>
+      </div>
     </section>
-    <section class="bottomfoot">
+
+    <section class="main-content">
+      <article class="landing-page">
+        <div class="landingpage-main-text">
+          <h1>Über uns</h1>
+          <p>
+            Die EspressoEcke, im Herzen Bern, verbindet Tradition mit modernem
+            Kaffeegenuss. Seit unserer Gründung im Jahr 2003 haben wir uns dem
+            perfekten Espresso verschrieben
+          </p>
+        </div>
+      </article>
+      <article class="mission">
+        <h2>Unsere Mission</h2>
+        <p>
+          Wir bei EspressoEcke streben danach, jeden Moment zu einem besonderen
+          Kaffeemoment zu machen und unsere Gemeinschaft durch den Geschmack von
+          Premium-Espresso zu verbinden
+        </p>
+      </article>
+      <article class="team">
+        <h2>Unser Team</h2>
+        <p>
+          Ein Team aus leidenschaftlichen Baristas und Kaffeeliebhabern, die es
+          sich zur Aufgabe gemacht haben, Ihre Kaffeepausen unvergesslich zu
+          gestalten
+        </p>
+        <div class="team-images">
+          <div class="team-member-image team-member1"></div>
+          <div class="team-member-image team-member2"></div>
+          <div class="team-member-image team-member3"></div>
+          <div class="team-member-image team-member4"></div>
+          <div class="team-member-image team-member5"></div>
+          <div class="team-member-image team-member6"></div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <section class="socialmedia">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          class="facebook sm-icon"
+        ></a>
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="twitter sm-icon"
+        ></a>
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          class="youtube sm-icon"
+        ></a>
+        <a
+          href="https://whatsapp.com"
+          target="_blank"
+          class="whatsapp sm-icon"
+        ></a>
+      </section>
+      <section class="bottomfoot">
         <a href="../../index.html">Impressum</a>
         <a href="../../index.html">AGB</a>
         <a href="../../index.html">Datenschutz</a>
         <a href="../../index.html">Kontakt</a>
-    </section>
-</footer>
+      </section>
+    </footer>
 
-<script>
-    //Nav
-    function openNav() {
+    <script>
+      //Nav
+      function openNav() {
         document.getElementById("myNav").style.left = "0";
-    }
+      }
 
-    function closeNav() {
+      function closeNav() {
         document.getElementById("myNav").style.left = "100%";
-    }
-
-</script>
-</body>
+      }
+    </script>
+  </body>
 </html>
