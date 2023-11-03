@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EspressoEcke</title>
+    <link rel="stylesheet" href="../../styles.css"/>
+    <link rel="stylesheet" href="impressum.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<section class="header-section">
+    <header>
+        <a href="../../index.html">EspressoEcke</a>
+        <a class="hamburger" onclick="openNav()">&#9776;</a>
+    </header>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+        >
+        <div class="overlay-content">
+            <a href="../../index.html">Home</a>
+            <a href="../../pages/ueber-uns/ueber-uns.html">Über uns</a>
+            <a
+                    href="../../pages/gerichte/gerichte.html"
+            >Gerichte</a
+            >
+            <a href="../../pages/newsletter/newsletter.html">Newsletter</a>
+            <a href="../../pages/kontakt/kontakt.html">Kontakt</a>
+        </div>
+    </div>
+    <button class="btn-kontakt" onclick="window.location.href='../../pages/kontakt/kontakt.html'">Contact</button>
+</section>
+
+<section class="main-content">
+
+    <article class="landing-page">
+        <div class="landingpage-main-text">
+            <h1>Impressum</h1>
+            <p>Gabriel Listiak</p>
+            <p>Shchwarzenburgstrasse 316</p>
+            <p>3098 Koeniz</p>
+            <p>+41 77 224 10 25</p>
+            <p>gabkolistiak@gmail.com</p>
+        </div>
+    </article>
+</section>
+
+<footer>
+    <section class="socialmedia">
+        <a
+                href="https://facebook.com"
+                target="_blank"
+                class="facebook sm-icon"
+        ></a>
+        <a
+                href="https://twitter.com"
+                target="_blank"
+                class="twitter sm-icon"
+        ></a>
+        <a
+                href="https://youtube.com"
+                target="_blank"
+                class="youtube sm-icon"
+        ></a>
+        <a
+                href="https://whatsapp.com"
+                target="_blank"
+                class="whatsapp sm-icon"
+        ></a>
+    </section>
+    <section class="bottomfoot">
+        <a  href="../../pages/impressum/impressum.html">Impressum</a>
+        <a  class="modalBtn">AGB</a>
+        <a  class="modalBtn">Datenschutz</a>
+        <a  class="modalBtn">Kontakt</a>
+    </section>
+</footer>
+
+<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Coming soon</p>
+    </div>
+
+</div>
+
+<script>
+    //Nav
+    function openNav() {
+        document.getElementById("myNav").style.left = "0";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.left = "100%";
+    }
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    const btns = document.getElementsByClassName("modalBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].onclick = function() {
+            modal.style.display = "block";
+        }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

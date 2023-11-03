@@ -107,12 +107,25 @@
         ></a>
     </section>
     <section class="bottomfoot">
-        <a href="../../index.html">Impressum</a>
-        <a href="../../index.html">AGB</a>
-        <a href="../../index.html">Datenschutz</a>
-        <a href="../../index.html">Kontakt</a>
+        <a  href="../../pages/impressum/impressum.html">Impressum</a>
+        <a  class="modalBtn">AGB</a>
+        <a  class="modalBtn">Datenschutz</a>
+        <a  class="modalBtn">Kontakt</a>
     </section>
 </footer>
+
+<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Coming soon</p>
+    </div>
+
+</div>
 
 <script>
     //Nav
@@ -122,6 +135,34 @@
 
     function closeNav() {
         document.getElementById("myNav").style.left = "100%";
+    }
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    const btns = document.getElementsByClassName("modalBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].onclick = function() {
+            modal.style.display = "block";
+        }
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     }
 </script>
 </body>
