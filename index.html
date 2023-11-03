@@ -88,6 +88,11 @@
             id="circle2"
             onclick="clearTimeout(timeOutId); currentImageId=2;  changePicture()"
           ></div>
+          <div
+            class="circle"
+            id="circle3"
+            onclick="clearTimeout(timeOutId); currentImageId=3;  changePicture()"
+          ></div>
         </div>
       </article>
       <h2 style="text-align: center">Spezialitäten</h2>
@@ -179,10 +184,12 @@
           images[0] = "images/bg-image-wide1.png";
           images[1] = "images/bg-image-wide2.png";
           images[2] = "images/bg-image-wide3.png";
+          images[3] = "images/homepage-bg-wide-dalle4.png";
         } else {
           images[0] = "images/homepage-bg-dalle1.png";
           images[1] = "images/homepage-bg-dalle2.png";
           images[2] = "images/homepage-bg-dalle3.png";
+          images[3] = "images/homepage-bg-dalle4.png";
         }
 
         renderImage(images[currentImageId]);
@@ -199,7 +206,7 @@
               "url(" + img.src + ")";
             document.getElementById("slideshoww").style.opacity = "1";
 
-            for (i = 0; i < 3; i++) {
+            for (i = 0; i < images.length; i++) {
               document.getElementById("circle" + i).style.backgroundColor =
                 "rgba(0,0,0,0.37)";
             }
