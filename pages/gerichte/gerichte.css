@@ -50,6 +50,31 @@
         font-size: 19pt !important;
     }
 }
+@media (min-width: 1050px) {
+    .gerichte {
+        gap: 40px !important;
+    }
+    .gerichte > section {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        gap: 80px;
+        height: 420px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .gerichte > section > article {
+        width: 100% !important;
+        height: auto !important;
+        background-repeat: no-repeat !important;
+        background-color: rgba(255,255,255,0) !important;
+        max-width: 250px !important;
+        max-height: 250px !important;
+    }
+    .main-content {
+        padding-top: 155px;
+    }
+}
 
 .gerichte {
     display: flex;

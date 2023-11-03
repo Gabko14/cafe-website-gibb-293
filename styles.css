@@ -19,6 +19,10 @@ header {
   filter: brightness(82%);
 }
 
+.main-content {
+  padding-bottom: 100px;
+}
+
 .btn-kontakt {
   border: black solid 2px;
   height: 48px;
