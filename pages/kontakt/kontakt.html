@@ -1,148 +1,150 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Your Website Title</title>
-    <link rel="stylesheet" href="../../styles.css" />
-    <link rel="stylesheet" href="kontakt.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../styles.css"/>
+    <link rel="stylesheet" href="kontakt.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap"
+            rel="stylesheet"
     />
-  </head>
-  <body>
-    <section class="header-section">
-      <header>
+</head>
+<body>
+<section class="header-section">
+    <header>
         <a href="../../index.html">EspressoEcke</a>
         <a class="hamburger" onclick="openNav()">&#9776;</a>
-      </header>
+    </header>
 
-      <div id="myNav" class="overlay">
+    <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a
+        >&times;</a
         >
         <div class="overlay-content">
-          <a href="../../index.html">Home</a>
-          <a href="../../pages/ueber-uns/ueber-uns.html">Über uns</a>
-          <a href="../../pages/gerichte/gerichte.html">Gerichte</a>
-          <a href="../../pages/newsletter/newsletter.html">Newsletter</a>
-          <a
-            href="../../pages/kontakt/kontakt.html"
-            style="
+            <a href="../../index.html">Home</a>
+            <a href="../../pages/ueber-uns/ueber-uns.html">Über uns</a>
+            <a href="../../pages/gerichte/gerichte.html">Gerichte</a>
+            <a href="../../pages/newsletter/newsletter.html">Newsletter</a>
+            <a
+                    href="../../pages/kontakt/kontakt.html"
+                    style="
               color: #232323;
               text-decoration: #232323 solid underline 3px;
               text-underline-offset: 10px;
             "
             >Kontakt</a
-          >
+            >
         </div>
-      </div>
-      <button class="btn-kontakt">Contact</button>
-    </section>
+    </div>
+    <button class="btn-kontakt" onclick="window.location.href='../../pages/kontakt/kontakt.html'">Contact</button>
+</section>
 
-    <section class="main-content">
-      <article class="map">
+<section class="main-content">
+    <article class="map">
         <iframe
-          class="map-embed"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d530.3614408113949!2d149.42725642205073!3d-34.91356543591755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b16eb00278ce7c7%3A0x6a0354bd92daf79e!2sSome%20Cafe!5e0!3m2!1sde!2sch!4v1698832290369!5m2!1sde!2sch"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+                class="map-embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d530.3614408113949!2d149.42725642205073!3d-34.91356543591755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b16eb00278ce7c7%3A0x6a0354bd92daf79e!2sSome%20Cafe!5e0!3m2!1sde!2sch!4v1698832290369!5m2!1sde!2sch"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </article>
-      <article class="form">
-        <h1>Kontaktier uns!</h1>
-        <p><span class="phone-icon icon"></span> Kaffestrasse 123, Bern</p>
-        <p><span class="map-icon icon"></span> +41 77 374 10 54</p>
+    </article>
+    <article class="form">
+        <div class="form-text-part">
+            <h1>Kontaktier uns!</h1>
+            <p><span class="phone-icon icon"></span> Kaffestrasse 123, Bern</p>
+            <p><span class="map-icon icon"></span> +41 77 374 10 54</p>
+        </div>
         <form>
-          <input name="Name" id="name-input" placeholder="Name" />
-          <label for="name-input"></label>
-          <input
-            type="email"
-            id="mail-input"
-            name="E-Mail"
-            placeholder="Email Adresse"
-          />
-          <label
-            for="mail-input"
-            class="mail-label"
-            style="color: red; opacity: 0"
+            <input class="name-input-class" name="Name" id="name-input" placeholder="Name"/>
+            <label style="display: none" for="name-input"></label>
+            <input
+                    type="email"
+                    id="mail-input"
+                    name="E-Mail"
+                    placeholder="Email Adresse"
+            />
+            <label
+                    for="mail-input"
+                    class="mail-label"
+                    style="color: red; opacity: 0"
             >Incorrect Address</label
-          >
-          <label>
+            >
+            <label class="text-input-label">
             <textarea
-              id="text-input"
-              placeholder="Schreibe deine Nachricht hier"
-              name="Message"
+                    id="text-input"
+                    placeholder="Schreibe deine Nachricht hier"
+                    name="Message"
             ></textarea>
-          </label>
-          <button type="submit">Abschicken</button>
+            </label>
+            <button type="submit">Abschicken</button>
         </form>
-      </article>
-    </section>
+    </article>
+</section>
 
-    <footer>
-      <section class="socialmedia">
+<footer>
+    <section class="socialmedia">
         <a
-          href="https://facebook.com"
-          target="_blank"
-          class="facebook sm-icon"
+                href="https://facebook.com"
+                target="_blank"
+                class="facebook sm-icon"
         ></a>
         <a
-          href="https://twitter.com"
-          target="_blank"
-          class="twitter sm-icon"
+                href="https://twitter.com"
+                target="_blank"
+                class="twitter sm-icon"
         ></a>
         <a
-          href="https://youtube.com"
-          target="_blank"
-          class="youtube sm-icon"
+                href="https://youtube.com"
+                target="_blank"
+                class="youtube sm-icon"
         ></a>
         <a
-          href="https://whatsapp.com"
-          target="_blank"
-          class="whatsapp sm-icon"
+                href="https://whatsapp.com"
+                target="_blank"
+                class="whatsapp sm-icon"
         ></a>
-      </section>
-      <section class="bottomfoot">
+    </section>
+    <section class="bottomfoot">
         <a href="../../index.html">Impressum</a>
         <a href="../../index.html">AGB</a>
         <a href="../../index.html">Datenschutz</a>
         <a href="../../index.html">Kontakt</a>
-      </section>
-    </footer>
+    </section>
+</footer>
 
-    <script>
-      //Nav
-      function openNav() {
+<script>
+    //Nav
+    function openNav() {
         document.getElementById("myNav").style.left = "0";
-      }
+    }
 
-      function closeNav() {
+    function closeNav() {
         document.getElementById("myNav").style.left = "100%";
-      }
+    }
 
-      //Validation
-      const email = document.getElementById("mail-input");
+    //Validation
+    const email = document.getElementById("mail-input");
 
-      email.addEventListener("blur", () => {
+    email.addEventListener("blur", () => {
         if (email.validity.typeMismatch) {
-          email.style.borderColor = "red";
-          email.style.borderStyle = "dotted";
-          document.querySelector(".mail-label").style.opacity = "1";
-          document.querySelector(".mail-label").style.display = "block";
+            email.style.borderColor = "red";
+            email.style.borderStyle = "dotted";
+            document.querySelector(".mail-label").style.opacity = "1";
+            document.querySelector(".mail-label").style.display = "block";
         } else {
-          email.setCustomValidity("");
-          email.style.borderColor = "#3b2f2f";
-          email.style.borderStyle = "solid";
-          document.querySelector(".mail-label").style.opacity = "0";
-          document.querySelector(".mail-label").style.display = "none";
+            email.setCustomValidity("");
+            email.style.borderColor = "#3b2f2f";
+            email.style.borderStyle = "solid";
+            document.querySelector(".mail-label").style.opacity = "0";
+            document.querySelector(".mail-label").style.display = "none";
         }
-      });
-    </script>
-  </body>
+    });
+</script>
+</body>
 </html>
