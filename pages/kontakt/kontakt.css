@@ -5,12 +5,12 @@
     .main-content {
         display: flex !important;
         flex-direction: row-reverse !important;
-        padding-top: 150px !important;
         justify-content: center;
-        padding-bottom: 240px !important;
+        padding: 150px 150px 240px 150px !important;
     }
 
     .form {
+        padding: 0 !important;
         flex-grow: 1;
         max-width: 550px;
         justify-content: space-between;
