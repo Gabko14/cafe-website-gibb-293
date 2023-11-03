@@ -12,7 +12,30 @@ header {
   z-index: 10;
 }
 
+.header-section > .btn-kontakt {
+  display: none;
+}
+.btn-kontakt:hover {
+  filter: brightness(82%);
+}
+
+.btn-kontakt {
+  border: black solid 2px;
+  height: 48px;
+  background-color: #3b2f2f;
+  color: #f5e9d8;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  align-self: center;
+}
+
 @media (min-width: 1050px) {
+  .header-section > .btn-kontakt {
+    display: block !important;
+  }
   .hamburger {
     display: none;
   }

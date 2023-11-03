@@ -13,20 +13,21 @@
     height: 80vh;
     position: relative;
     min-height: 550px;
-    /*z-index: -1;*/
 
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../../images/about-us-dalle3.png");
 }
 
-.landingpage {
+.landing-page {
     font-family: 'Noto Sans', sans-serif !important;
 }
+
 .landingpage-main-text > h1 {
     margin: 0;
 }
+
 
 @media (max-width: 355px) {
     .landingpage-main-text > p {
@@ -36,6 +37,54 @@
     .landingpage-main-text {
         font-size: 24pt !important;
     }
+}
+
+@media (min-width: 1050px) {
+    .landing-page {
+        height: 100vh;
+        background-image: url("/images/about-us-wide-dalle.png");
+    }
+
+    .mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission > p {
+        max-width: 700px !important;
+    }
+
+    .team-text {
+        max-width: 700px !important;
+    }
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 200px !important;
+        gap: 50px;
+    }
+
+    .team-images {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+        gap: 80px;
+        height: 700px;
+        width: 100%;
+    }
+    .team-member-image {
+        width: 100% !important;
+        height: auto !important;
+        background-repeat: no-repeat !important;
+        background-color: rgba(255,255,255,0) !important;
+        max-width: 280px !important;
+        max-height: 280px !important;
+    }
+    .main-content {
+        gap: 80px !important;
+    }
 
 }
 
@@ -43,6 +92,9 @@
     line-height: 1.4;
     color: #3b2f2f;
     font-size: 30pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .landingpage-main-text > p {
@@ -50,6 +102,7 @@
     font-size: 18px;
     color: #282828;
     padding-bottom: 15px;
+    max-width: 700px;
 }
 
 .main-content {
@@ -84,18 +137,23 @@
 .team-member1 {
     background-image: url("../../images/worker-dalle1.png");
 }
+
 .team-member2 {
     background-image: url("../../images/worker-dalle2.png");
 }
+
 .team-member3 {
     background-image: url("../../images/worker-dalle3.png");
 }
+
 .team-member4 {
     background-image: url("../../images/worker-dalle4.png");
 }
+
 .team-member5 {
     background-image: url("../../images/worker-dalle5.png");
 }
+
 .team-member6 {
     background-image: url("../../images/worker-dalle6.png");
 }
