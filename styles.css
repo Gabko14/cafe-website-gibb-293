@@ -76,6 +76,14 @@ header {
   .landing-page {
     padding: 0 300px !important;
   }
+  .socialmedia {
+    justify-content: center !important;
+    gap: 60px;
+  }
+  .bottomfoot {
+    justify-content: center !important;
+    gap: 40px !important;
+  }
 }
 
 html {
