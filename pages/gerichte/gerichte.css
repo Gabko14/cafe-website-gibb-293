@@ -10,7 +10,7 @@
 }
 
 .gerichte {
-    padding: 0 60px;
+    padding: 0 18vw;
 }
 
 .landing-page {
@@ -49,6 +49,9 @@
     .gerichte h2 {
         font-size: 19pt !important;
     }
+    .preise h2 {
+        font-size: 19pt !important;
+    }
 }
 @media (min-width: 1050px) {
     .gerichte {
@@ -62,6 +65,7 @@
         height: 420px;
         width: 100%;
         padding-bottom: 30px;
+        max-width: none !important;
     }
     .gerichte > section > article {
         width: 100% !important;
@@ -94,6 +98,11 @@
     text-decoration-color: #3b2f2f;
 }
 
+.preise h2 {
+    font-size: 22pt;
+    bottom: 0;    color: #3b2f2f;
+}
+
 .gerichte > section > article > p, .gerichte > section > article > h3{
     margin: 0;
 }
@@ -106,6 +115,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    max-width: 400px;
 }
 
 .gerichte > section > article {
@@ -113,3 +123,83 @@
     flex-direction: column;
     gap: 15px;
 }
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and cells styling */
+th, td {
+    padding: 10px;
+    border: 1px solid #987553;
+    text-align: left;
+}
+
+/* Header specific styling */
+th {
+    background-color: #d9bca0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+    background-color: #d9bca0;
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: #d9bca0;
+}
+
+/* Price specific styling */
+th:first-child, td:first-child {
+    background-color: #d4a373;
+    color: #3B2F2F;
+}
+.preise {
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 722px) {
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        display: block;
+        border-bottom: 2px solid #987553;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: 0.8em;
+        border-bottom: 1px dotted #987553;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        content: attr(data-title);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
